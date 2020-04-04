@@ -5,8 +5,8 @@
   "description": "Kodifaj backend repo",
   "license": "MIT",
   "scripts": {
-    "prebuild": "./node_modules/rimraf/rimraf.js dist",
-    "build": "./node_modules/@nestjs/cli/bin/nest.js build",
+    "prebuild": "rimraf dist",
+    "build": "node_modules/@nestjs/cli/bin/nest.js build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "./node_modules/@nestjs/cli/bin/nest.js start",
     "start:dev": "nest start --watch",
