@@ -1,8 +1,8 @@
 {
-  "name": "nest-typescript-starter",
+  "name": "kodifaj-backend",
   "private": true,
   "version": "1.0.0",
-  "description": "Nest TypeScript starter repository",
+  "description": "Kodifaj backend repo",
   "license": "MIT",
   "scripts": {
     "prebuild": "rimraf dist",
