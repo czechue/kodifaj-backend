@@ -6,7 +6,7 @@ import { TaskService } from '../../src/task/task.service';
 import { MongoMemoryServer } from 'mongodb-memory-server';
 import testDataBase from '../utils/test-data-base.module';
 
-describe.only('TaskController (e2e)', () => {
+describe('TaskController (e2e)', () => {
   let app: INestApplication;
   let mongod: MongoMemoryServer;
   let taskService = { findAll: () => [{ _id: '1' }] };
