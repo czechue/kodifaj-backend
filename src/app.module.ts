@@ -9,7 +9,9 @@ import { TaskModule } from './task/task.module';
 
 @Module({
   imports: [
-    ConfigModule.forRoot(),
+    ConfigModule.forRoot({
+      envFilePath: ['.env.dev', '.env'],
+    }),
     MongooseModule.forRoot(process.env.MONGO_URI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
