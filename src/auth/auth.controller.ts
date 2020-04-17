@@ -10,7 +10,6 @@ import {
 } from '@nestjs/common';
 import { GithubGuard } from '../common/guards/github.guard';
 import { Public } from '../common/guards/public.guard';
-import { User } from '../common/decorators/user.decorator';
 
 @Controller('/auth')
 export class AuthController {
@@ -25,8 +24,8 @@ export class AuthController {
   @Get('/github/callback')
   @UseGuards(GithubGuard)
   @Redirect('/')
-  public githubLoginCallback(@User() user: any): void {
-    return user;
+  public githubLoginCallback(): { url: string } {
+    return { url: process.env.HOST_URL };
   }
 
   @Public()
@@ -35,7 +34,6 @@ export class AuthController {
   public logout(@Req() req: Request, @Res() res: Response): void {
     // @ts-ignore
     req.logout();
-    req.logout();
-    res.redirect('/');
+    res.redirect('http://localhost:3000');
   }
 }
