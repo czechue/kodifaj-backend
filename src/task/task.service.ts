@@ -14,7 +14,7 @@ export class TaskService {
   async findAll(): Promise<Task[]> {
     return await this.taskModel
       .find()
-      .populate('_user', 'login')
+      .populate('_user', 'login photo')
       .exec();
   }
 }

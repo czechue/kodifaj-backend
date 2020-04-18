@@ -6,6 +6,7 @@ export interface Task extends Document {
   _user: {
     _id: string;
     login: string;
+    photo: string;
   };
   _solutions: Solution[];
   content: string;
