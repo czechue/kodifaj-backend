@@ -34,6 +34,6 @@ export class AuthController {
   public logout(@Req() req: Request, @Res() res: Response): void {
     // @ts-ignore
     req.logout();
-    res.redirect('http://localhost:3000');
+    res.redirect(process.env.HOST_URL);
   }
 }
